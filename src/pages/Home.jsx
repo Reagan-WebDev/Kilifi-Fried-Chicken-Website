@@ -2,6 +2,7 @@ import Hero from "../components/Hero";
 import FeaturedDishes from "../components/FeaturedDishes";
 import GalleryPreview from "../components/GalleryPreview";
 import AboutSection from "../components/AboutSection";
+import Testimonials from "../components/Testimonials";
 
 
 function Home() {
@@ -11,7 +12,8 @@ function Home() {
       <FeaturedDishes />
       <GalleryPreview />
       <AboutSection />
-      
+      <Testimonials />
+
     </div>
   );
 }
