@@ -1,6 +1,7 @@
 import Hero from "../components/Hero";
 import FeaturedDishes from "../components/FeaturedDishes";
 import GalleryPreview from "../components/GalleryPreview";
+import AboutSection from "../components/AboutSection";
 
 
 function Home() {
@@ -9,6 +10,8 @@ function Home() {
       <Hero />
       <FeaturedDishes />
       <GalleryPreview />
+      <AboutSection />
+      
     </div>
   );
 }
