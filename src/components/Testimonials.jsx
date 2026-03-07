@@ -1,4 +1,5 @@
 import "../styles/testimonials.css";
+import { FaStar } from "react-icons/fa";
 
 function Testimonials() {
 
@@ -27,7 +28,15 @@ function Testimonials() {
         {reviews.map((review, index) => (
           <div className="testimonial-card" key={index}>
 
-            <div className="stars">★★★★★</div>
+            <div className="stars">
+              <FaStar />
+              <FaStar />
+              <FaStar />
+              <FaStar />
+              <FaStar />
+            </div>
+
+
 
             <p>"{review.text}"</p>
 
