@@ -25,12 +25,12 @@
 
 .menu-title h1{
   font-size:38px;
-  color:#222;
+  color:#FCA311;
   margin-bottom:5px;
 }
 
 .menu-title p{
-  color:#666;
+  color:#FCA311;
   font-size:16px;
 }
 
@@ -61,7 +61,7 @@
   margin-bottom:15px;
   border-bottom:2px solid #ddd;
   padding-bottom:5px;
-  color:#111;
+  color:#FCA311;
 }
 
 /* Items */
@@ -82,7 +82,7 @@
 /* Hover effect */
 
 .menu-item:hover{
-  color:#c58b2a;
+  color:#FCA311;
   transform:translateX(5px);
   transition:0.2s;
 }
