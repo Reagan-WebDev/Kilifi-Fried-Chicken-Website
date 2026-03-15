@@ -1,68 +1,93 @@
 .menu-page{
-  background:#f5f5f5;
-  padding:80px 20px;
+  background:#111;   /* dark background like homepage */
+  min-height:100vh;
+  padding:100px 20px;
   display:flex;
   justify-content:center;
 }
 
+/* Menu card */
+
 .menu-container{
   background:white;
-  max-width:900px;
   width:100%;
-  padding:50px;
-  box-shadow:0 10px 30px rgba(0,0,0,0.15);
+  max-width:1100px;   /* wider menu */
+  padding:70px;
+  border-radius:10px;
+  box-shadow:0 20px 40px rgba(0,0,0,0.6);
 }
+
+/* Title */
 
 .menu-title{
   text-align:center;
 }
 
 .menu-title h1{
-  font-size:32px;
-  letter-spacing:2px;
-  color:#c58b2a;
+  font-size:38px;
+  color:#222;
+  margin-bottom:5px;
 }
 
 .menu-title p{
-  color:#777;
-  margin-top:5px;
+  color:#666;
+  font-size:16px;
 }
+
+/* Divider */
 
 .menu-divider{
   height:2px;
-  background:#e0e0e0;
-  margin:30px 0;
+  background:#eee;
+  margin:40px 0;
 }
+
+/* Two columns */
 
 .menu-columns{
   display:grid;
   grid-template-columns:1fr 1fr;
-  gap:40px;
+  gap:70px;
 }
 
+/* Category */
+
 .menu-category{
-  margin-bottom:30px;
+  margin-bottom:35px;
 }
 
 .menu-category h2{
-  font-size:18px;
-  letter-spacing:1px;
+  font-size:20px;
   margin-bottom:15px;
-  color:#333;
-  border-bottom:1px solid #ddd;
+  border-bottom:2px solid #ddd;
   padding-bottom:5px;
+  color:#111;
 }
+
+/* Items */
 
 .menu-item{
   display:flex;
   justify-content:space-between;
-  margin-bottom:10px;
-  font-size:15px;
+  margin-bottom:12px;
+  font-size:16px;
+  color:#333;
 }
 
 .menu-item span:last-child{
   font-weight:bold;
+  color:#000;
 }
+
+/* Hover effect */
+
+.menu-item:hover{
+  color:#c58b2a;
+  transform:translateX(5px);
+  transition:0.2s;
+}
+
+/* Responsive */
 
 @media(max-width:768px){
 
@@ -71,7 +96,7 @@
   }
 
   .menu-container{
-    padding:35px;
+    padding:45px;
   }
 
 }
