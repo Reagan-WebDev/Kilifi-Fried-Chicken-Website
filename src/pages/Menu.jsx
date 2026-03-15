@@ -1,89 +1,106 @@
-import MenuItem from "../components/MenuItem";
 import "../styles/menu.css";
-
-import chicken from "../assets/images/chicken.jpg";
-import burger from "../assets/images/burger.jpg";
-import wings from "../assets/images/wings.jpg";
-import fries from "../assets/images/fries.jpg";
-import soda from "../assets/images/soda.jpg";
 
 function Menu() {
   return (
     <section className="menu-page">
 
-      <div className="menu-header">
-        <h1>Our Menu</h1>
-        <p>Freshly prepared meals served daily</p>
-      </div>
+      <div className="menu-container">
 
-      {/* Chicken Section */}
+        <div className="menu-title">
+          <h1>Kilifi Fried Chicken</h1>
+          <p>Freshly Prepared Meals Served Daily</p>
+        </div>
 
-      <div className="menu-category">
-        <h2>Chicken</h2>
+        <div className="menu-divider"></div>
 
-        <div className="menu-grid">
+        <div className="menu-columns">
 
-          <MenuItem
-            image={chicken}
-            name="Crispy Fried Chicken"
-            price="KSh 250"
-          />
+          {/* LEFT COLUMN */}
+          <div className="menu-column">
 
-          <MenuItem
-            image={wings}
-            name="Hot Chicken Wings"
-            price="KSh 280"
-          />
+            <div className="menu-category">
+              <h2>Signature Fried Chicken</h2>
+
+              <div className="menu-item">
+                <span>Classic Buttermilk Fried Chicken</span>
+                <span>KSh 250</span>
+              </div>
+
+              <div className="menu-item">
+                <span>Hot Chicken Wings</span>
+                <span>KSh 280</span>
+              </div>
+
+              <div className="menu-item">
+                <span>Crispy Chicken Tenders</span>
+                <span>KSh 260</span>
+              </div>
+
+            </div>
+
+
+            <div className="menu-category">
+              <h2>Gourmet Sides</h2>
+
+              <div className="menu-item">
+                <span>French Fries</span>
+                <span>KSh 150</span>
+              </div>
+
+              <div className="menu-item">
+                <span>Loaded Fries</span>
+                <span>KSh 200</span>
+              </div>
+
+            </div>
+
+          </div>
+
+
+          {/* RIGHT COLUMN */}
+
+          <div className="menu-column">
+
+            <div className="menu-category">
+              <h2>Burgers</h2>
+
+              <div className="menu-item">
+                <span>Chicken Burger</span>
+                <span>KSh 300</span>
+              </div>
+
+              <div className="menu-item">
+                <span>Spicy Chicken Burger</span>
+                <span>KSh 320</span>
+              </div>
+
+            </div>
+
+
+            <div className="menu-category">
+              <h2>Drinks</h2>
+
+              <div className="menu-item">
+                <span>Soda</span>
+                <span>KSh 80</span>
+              </div>
+
+              <div className="menu-item">
+                <span>Fresh Juice</span>
+                <span>KSh 150</span>
+              </div>
+
+              <div className="menu-item">
+                <span>Mineral Water</span>
+                <span>KSh 60</span>
+              </div>
+
+            </div>
+
+          </div>
 
         </div>
-      </div>
 
-      {/* Burgers */}
-
-      <div className="menu-category">
-        <h2>Burgers</h2>
-
-        <div className="menu-grid">
-
-          <MenuItem
-            image={burger}
-            name="Chicken Burger"
-            price="KSh 300"
-          />
-
-        </div>
-      </div>
-
-      {/* Sides */}
-
-      <div className="menu-category">
-        <h2>Sides</h2>
-
-        <div className="menu-grid">
-
-          <MenuItem
-            image={fries}
-            name="French Fries"
-            price="KSh 150"
-          />
-
-        </div>
-      </div>
-
-      {/* Drinks */}
-
-      <div className="menu-category">
-        <h2>Drinks</h2>
-
-        <div className="menu-grid">
-
-          <MenuItem
-            image={soda}
-            name="Soda"
-            price="KSh 80"
-          />
-
-        </div>
       </div>
 
     </section>
