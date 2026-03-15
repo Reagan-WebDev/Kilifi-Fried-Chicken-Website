@@ -33,11 +33,25 @@ function Footer() {
 
         <div className="footer-social">
           <h3>Follow Us</h3>
+
           <div className="social-icons">
-            <FaInstagram />
-            <FaFacebook />
-            <FaTiktok />
-            <FaYoutube />
+
+            <a href="https://instagram.com/kilififriedchicken" target="_blank" rel="noopener noreferrer">
+              <FaInstagram />
+            </a>
+
+            <a href="https://facebook.com/kilififriedchicken" target="_blank" rel="noopener noreferrer">
+              <FaFacebook />
+            </a>
+
+            <a href="https://tiktok.com/@kilififriedchicken" target="_blank" rel="noopener noreferrer">
+              <FaTiktok />
+            </a>
+
+            <a href="https://youtube.com/@kilififriedchicken" target="_blank" rel="noopener noreferrer">
+              <FaYoutube />
+            </a>
+
           </div>
         </div>
 
