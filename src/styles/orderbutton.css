@@ -1,0 +1,24 @@
+.floating-order-btn{
+  position: fixed;
+  bottom: 20px;
+  right: 20px; /* same as WhatsApp style */
+  background: #FCA311;
+  color: white;
+  border: none;
+  padding: 14px 18px;
+  border-radius: 50px;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 9999;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+/* Hover */
+.floating-order-btn:hover{
+  background: #FCA311;
+}
+@media (min-width: 769px){
+  .floating-order-btn{
+    display: none;
+  }
+}

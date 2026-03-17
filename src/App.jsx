@@ -4,6 +4,7 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import WhatsappButton from "./components/WhatsappButton";
 import ScrollToTop from "./components/ScrollToTop";
+import FloatingOrderButton from "./components/FloatingOrderButton";
 
 import Home from "./pages/Home";
 import Menu from "./pages/Menu";
@@ -18,6 +19,8 @@ function App() {
       <Navbar />
 
       <ScrollToTop />
+
+      <FloatingOrderButton />
 
       <Routes>
         <Route path="/" element={<Home />} />
