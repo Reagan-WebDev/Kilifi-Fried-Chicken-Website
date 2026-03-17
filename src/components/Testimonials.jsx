@@ -5,7 +5,7 @@ function Testimonials() {
 
   const reviews = [
     {
-      name: "Brian",
+      name: "ReaganOT",
       text: "The best fried chicken in Kilifi! Crispy, flavorful and always fresh.",
     },
     {
