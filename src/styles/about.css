@@ -133,4 +133,10 @@
     flex-direction:column;
   }
 
+} 
+
+.about-text .about-btn {
+  text-decoration: none;
+  font-weight: 500;
+  border-radius: 10px;
 }

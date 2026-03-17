@@ -1,5 +1,6 @@
 import "../styles/about.css";
 import restaurant from "../assets/images/restaurant.jpg";
+import { Link } from "react-router-dom";
 
 function AboutSection() {
   return (
@@ -28,7 +29,9 @@ function AboutSection() {
             atmosphere.
           </p>
 
-          <button className="about-btn">Learn More</button>
+          <Link to="/about" className="about-btn">
+            Learn More
+          </Link>
 
         </div>
 
