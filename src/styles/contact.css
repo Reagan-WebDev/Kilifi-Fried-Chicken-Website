@@ -10,6 +10,8 @@
   display:grid;
   grid-template-columns:1fr 1fr;
   background:#f5f2eb;
+  width:100%;
+  overflow:hidden; /* 🔥 prevents overflow */
 }
 
 /* image */
@@ -18,12 +20,14 @@
   width:100%;
   height:100%;
   object-fit:cover;
+  display:block;
 }
 
 /* content */
 
 .contact-content{
   padding:60px;
+  max-width:100%;
 }
 
 .contact-content h1{
@@ -42,6 +46,7 @@
 
 .contact-form input,
 .contact-form textarea{
+  width: 100%;
   border:none;
   border-bottom:2px solid #FCA311;
   padding:10px;
@@ -102,6 +107,10 @@
 
   .contact-image{
     height:350px;
+  }
+
+  .contact-content{
+    padding:30px 20px;
   }
 
 }
