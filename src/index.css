@@ -7,3 +7,20 @@
 body{
   overflow-x:hidden;  /* 🔥 prevents horizontal scroll */
 }
+
+/* Hide scrollbar but keep scrolling */
+
+/* For Chrome, Edge, Safari */
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* For Firefox */
+html {
+  scrollbar-width: none;
+}
+
+/* For IE & older Edge */
+body {
+  -ms-overflow-style: none;
+}
