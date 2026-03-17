@@ -24,3 +24,14 @@
   background-color: #1ebe5d;
   transform: scale(1.05);
 }
+
+@media (max-width: 768px) {
+    .whatsapp-button {
+        padding: 10px 15px;
+        font-size: 14px;
+    }
+    
+    .whatsapp-button svg {
+        font-size: 18px;
+    }
+}
