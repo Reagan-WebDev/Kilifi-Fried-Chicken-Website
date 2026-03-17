@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import WhatsappButton from "./components/WhatsappButton";
+import ScrollToTop from "./components/ScrollToTop";
 
 import Home from "./pages/Home";
 import Menu from "./pages/Menu";
@@ -15,6 +16,8 @@ function App() {
     <Router>
 
       <Navbar />
+
+      <ScrollToTop />
 
       <Routes>
         <Route path="/" element={<Home />} />
