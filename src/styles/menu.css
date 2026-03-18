@@ -66,12 +66,15 @@
 
 /* Items */
 
-.menu-item{
+.menu-column .menu-category .menu-item{
   display:flex;
   justify-content:space-between;
   margin-bottom:12px;
   font-size:16px;
   color:#333;
+}
+.menu-column .menu-category .menu-item:hover {
+  color: #FCA311;
 }
 
 .menu-item span:last-child{
