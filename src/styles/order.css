@@ -67,6 +67,7 @@ body {
   border-radius:10px;
   z-index:9999;
 }
+
 .receipt .pay-btn {
     cursor: pointer;
 }
