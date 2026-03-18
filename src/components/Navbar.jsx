@@ -1,12 +1,14 @@
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 
 import "../styles/navbar.css";
 
 function Navbar() {
 
   const [menuOpen, setMenuOpen] = useState(false);
+  const navigate = useNavigate();
 
   const closeMenu = () => {
     setMenuOpen(false);
@@ -47,7 +49,12 @@ function Navbar() {
 
       </ul>
 
-      <button className="order-btn">Order Now</button>
+      <button 
+        className="order-btn"
+        onClick={() => navigate("/order")}
+      >
+        Order Now
+      </button>
 
     </nav>
   );

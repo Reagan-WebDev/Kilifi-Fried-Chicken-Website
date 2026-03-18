@@ -1,8 +1,12 @@
 import "../styles/hero.css";
 import heroImage from "../assets/images/background3.jpg";
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 function Hero() {
+
+    const navigate = useNavigate();
+    
   return (
     <section className="hero">
 
@@ -16,7 +20,12 @@ function Hero() {
 
         <div className="hero-buttons">
           <Link to="/menu" className="menu-btn">View Menu</Link>
-          <button className="order-btn">Order Now</button>
+          <button 
+            className="order-btn"
+            onClick={() => navigate("/order")}
+          >
+            Order Now
+          </button>
         </div>
       </div>
 

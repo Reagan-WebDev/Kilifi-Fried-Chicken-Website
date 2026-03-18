@@ -7,7 +7,7 @@ function FloatingOrderButton() {
   return (
     <button 
       className="floating-order-btn"
-      onClick={() => navigate("/menu")}
+      onClick={() => navigate("/order")}
     >
       🍗 Order Now
     </button>

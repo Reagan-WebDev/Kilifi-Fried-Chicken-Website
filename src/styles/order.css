@@ -1,0 +1,161 @@
+body {
+  overflow-x: hidden;
+}
+
+.order-page{
+  background:#111;
+  color:white;
+  min-height:100vh;
+  padding:40px;
+  z-index: 10000;
+}
+
+.order-container{
+  display:grid;
+  grid-template-columns:2fr 1fr;
+  gap:30px;
+}
+
+/* MENU */
+.menu-item{
+  display:flex;
+  justify-content:space-between;
+  margin:10px 0;
+  color: white;
+}
+
+.menu-item button{
+  background:#FCA311;
+  border:none;
+  padding:5px 10px;
+  cursor:pointer;
+}
+
+/* CART */
+.cart-section{
+  background:#1a1a1a;
+  padding:20px;
+  border-radius:10px;
+}
+
+/* RECEIPT */
+.receipt{
+  position:fixed;
+  bottom:20px;
+  left:50%;
+  transform:translateX(-50%);
+  background:white;
+  color:black;
+  padding:20px;
+  border-radius:10px;
+  z-index:9999;
+}
+
+/* POPUP */
+.order-popup{
+  position:fixed;
+  top:20px;
+  left:50%;
+  transform:translateX(-50%);
+  background:#FCA311;
+  color:white;
+  padding:15px 25px;
+  border-radius:5px;
+  animation:fadeIn 0.5s ease;
+  z-index:10000;
+}
+
+@keyframes fadeIn{
+  from{opacity:0; transform:translate(-50%, -20px);}
+  to{opacity:1; transform:translate(-50%, 0);}
+}
+
+@media (max-width: 768px) {
+
+  .order-page {
+    padding: 20px 10px;
+  }
+
+  .order-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  /* MENU SECTION */
+  .menu-section {
+    width: 100%;
+  }
+
+  .menu-items {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .menu-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px;
+    border-radius: 10px;
+  }
+
+  .menu-item h3 {
+    font-size: 16px;
+  }
+
+  .menu-item p {
+    font-size: 14px;
+  }
+
+  .menu-item button {
+    padding: 6px 10px;
+    font-size: 12px;
+  }
+
+  /* RECEIPT SECTION */
+  .receipt-section {
+    width: 100%;
+    padding: 15px;
+  }
+
+  .receipt {
+    padding: 15px;
+    border-radius: 10px;
+  }
+
+  .receipt h2 {
+    font-size: 18px;
+    text-align: center;
+  }
+
+  .receipt-item {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    margin: 5px 0;
+  }
+
+  .total {
+    font-size: 16px;
+    font-weight: bold;
+  }
+
+  /* PAYMENT BUTTON */
+  .pay-btn {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border-radius: 8px;
+  }
+
+  /* POPUP */
+  .order-popup {
+    width: 90%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 14px;
+    padding: 12px;
+  }
+}

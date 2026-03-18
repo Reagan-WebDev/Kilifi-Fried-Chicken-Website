@@ -11,6 +11,7 @@ import Menu from "./pages/Menu";
 import Gallery from "./pages/Gallery";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
+import Order from "./pages/Order";
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
         <Route path="/gallery" element={<Gallery />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/order" element={<Order />} />
       </Routes>
 
       <Footer />
