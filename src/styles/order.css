@@ -92,6 +92,13 @@ body {
     border-radius: 4px;
 }
 
+.menu-section .menu-category {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 20px;
+    color: #FCA311;
+}
+
 @keyframes fadeIn{
   from{opacity:0; transform:translate(-50%, -20px);}
   to{opacity:1; transform:translate(-50%, 0);}
