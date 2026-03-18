@@ -187,7 +187,7 @@ useEffect(() => {
                   <div key={item.id} className="menu-item">
                     <span>{item.name}</span>
                     <span>KES {item.price}</span>
-                    <button onClick={() => addToCart(item)}>Add</button>
+                    <button onClick={() => addToCart(item)} className="addToCart-btn">Add</button>
                   </div>
                 ))
               }
