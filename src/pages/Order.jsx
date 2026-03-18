@@ -1,5 +1,8 @@
 import { useState } from "react";
 import "../styles/order.css";
+import { useEffect } from "react";
+
+
 
 const menuItems = [
   // Signature Fried Chicken
@@ -30,9 +33,32 @@ const menuItems = [
 ];
 
 function Order() {
-  const [cart, setCart] = useState([]);
-  const [showReceipt, setShowReceipt] = useState(false);
-  const [showPopup, setShowPopup] = useState(false);
+  const [cart, setCart] = useState(() => {
+  const savedCart = localStorage.getItem("cart");
+  return savedCart ? JSON.parse(savedCart) : [];
+});
+  const [showReceipt, setShowReceipt] = useState(() => {
+  return JSON.parse(localStorage.getItem("receipt")) || false;
+});
+  /*const [showPopup, setShowPopup] = useState(false);*/
+  const [showPopup, setShowPopup] = useState(() => {
+  const saved = localStorage.getItem("showPopup");
+  const startTime = localStorage.getItem("popupStartTime");
+
+  if (saved === "true" && startTime) {
+    const elapsed = Date.now() - parseInt(startTime, 10);
+
+    // Only show if less than 4 seconds have passed
+    if (elapsed < 4000) {
+      return true;
+    } else {
+      localStorage.removeItem("showPopup");
+      localStorage.removeItem("popupStartTime");
+    }
+  }
+
+  return false;
+});
 
   const categories = [
     "Signature Fried Chicken",
@@ -40,6 +66,45 @@ function Order() {
     "Burgers & Wraps",
     "Drinks"
   ];
+
+  useEffect(() => {
+  localStorage.setItem("cart", JSON.stringify(cart));
+}, [cart]);
+
+useEffect(() => {
+  localStorage.setItem("receipt", JSON.stringify(showReceipt));
+}, [showReceipt]);
+
+useEffect(() => {
+  if (showPopup) {
+    const startTime = localStorage.getItem("popupStartTime");
+
+    if (startTime) {
+      const elapsed = Date.now() - parseInt(startTime, 10);
+      const remaining = 4000 - elapsed;
+
+      if (remaining > 0) {
+        const timer = setTimeout(() => {
+          setShowPopup(false);
+          setCart([]);
+          setShowReceipt(false);
+
+          localStorage.removeItem("showPopup");
+          localStorage.removeItem("popupStartTime");
+          localStorage.removeItem("cart");
+          localStorage.removeItem("receipt");
+        }, remaining);
+
+        return () => clearTimeout(timer);
+      } else {
+        setShowPopup(false);
+
+        localStorage.removeItem("showPopup");
+        localStorage.removeItem("popupStartTime");
+      }
+    }
+  }
+}, [showPopup]);
 
   // ADD ITEM
   const addToCart = (item) => {
@@ -77,7 +142,7 @@ function Order() {
   };
 
   // PAYMENT SIMULATION
-  const handlePayment = () => {
+ /* const handlePayment = () => {
     setShowPopup(true);
 
     setTimeout(() => {
@@ -85,7 +150,15 @@ function Order() {
       setCart([]);
       setShowReceipt(false);
     }, 4000);
-  };
+  };*/
+
+  const handlePayment = () => {
+  setShowPopup(true);
+
+  // Save popup state + start time
+  localStorage.setItem("showPopup", "true");
+  localStorage.setItem("popupStartTime", Date.now().toString());
+};
 
   return (
     <section className="order-page">
