@@ -9,7 +9,7 @@ function AboutSection() {
       <div className="about-container">
 
         <div className="about-image">
-          <img src={restaurant} alt="Kilifi Fried Chicken Restaurant" />
+          <img src={restaurant} alt="Kilifi Fried Chicken Restaurant" loading="lazy" />
         </div>
 
         <div className="about-text">

@@ -16,7 +16,7 @@ function About() {
       <div className="about-section">
 
         <div className="about-image">
-          <img src={about1} alt="restaurant food" />
+          <img src={about1} alt="restaurant food" loading="lazy" />
         </div>
 
         <div className="about-text">
@@ -43,7 +43,7 @@ function About() {
       <div className="about-section reverse">
 
         <div className="about-image">
-          <img src={about2} alt="restaurant interior" />
+          <img src={about2} alt="restaurant interior" loading="lazy" />
         </div>
 
         <div className="about-text">

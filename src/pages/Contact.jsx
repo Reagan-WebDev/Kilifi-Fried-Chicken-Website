@@ -73,7 +73,7 @@ function Contact() {
       <div className="contact-container">
 
         <div className="contact-image">
-          <img src={restaurant} alt="restaurant interior" />
+          <img src={restaurant} alt="restaurant interior" loading="lazy" />
         </div>
 
         <div className="contact-content">

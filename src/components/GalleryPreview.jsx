@@ -17,7 +17,7 @@ function GalleryPreview() {
       <div className="gallery-grid">
         {images.map((img, index) => (
           <div className="gallery-item" key={index}>
-            <img src={img} alt={`Gallery ${index + 1}`} />
+            <img src={img} alt={`Gallery ${index + 1}`} loading="lazy" />
           </div>
         ))}
       </div>

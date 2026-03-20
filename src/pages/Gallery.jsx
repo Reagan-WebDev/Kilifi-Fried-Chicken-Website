@@ -18,27 +18,27 @@ function Gallery() {
       <div className="gallery-grid">
 
         <div className="gallery-item large">
-          <img src={img1} alt="food" />
+          <img src={img1} alt="food" loading="lazy" />
         </div>
 
         <div className="gallery-item">
-          <img src={img2} alt="restaurant" />
+          <img src={img2} alt="restaurant" loading="lazy" />
         </div>
 
         <div className="gallery-item tall">
-          <img src={img3} alt="drink" />
+          <img src={img3} alt="drink" loading="lazy" />
         </div>
 
         <div className="gallery-item">
-          <img src={img4} alt="interior" />
+          <img src={img4} alt="interior" loading="lazy" />
         </div>
 
         <div className="gallery-item">
-          <img src={img5} alt="food plating" />
+          <img src={img5} alt="food plating" loading="lazy" />
         </div>
 
         <div className="gallery-item">
-          <img src={img6} alt="chef" />
+          <img src={img6} alt="chef" loading="lazy" />
         </div>
 
       </div>
